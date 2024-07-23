@@ -1,0 +1,50 @@
+.loading_indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+.ellipsis_container {
+  display: inline-block;
+  width: 20px;
+}
+
+.ellipsis {
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  -webkit-animation: ellipsis steps(4, end) 2s infinite;
+  animation: ellipsis steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 20px;
+  }
+}
+
+.progress_bar_container {
+  width: 200px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid white;
+  background-color: black;
+}
+
+.progress_bar {
+  width: 0;
+  height: 100%;
+  background-color: white;
+  animation-name: progress;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+  to {
+    width: 100%;
+  }
+}
